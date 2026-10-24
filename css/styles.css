@@ -1,0 +1,567 @@
+/* Shared values: change these once to update both pages. */
+:root{
+    --paper: #faf6ef;
+    --ink: #26231e;
+    --muted: #625b52;
+    --line: #d7cfc2;
+    --panel: #eee7dc;
+    --accent: #a73e25;
+    --accent-light: #f1d2b5;
+    --space-small: 12px;
+    --space-medium: 24px;
+    --space-large: 48px;
+    --title-size: 72px;
+    --section-size: 32px;
+    --heading-size: 23px;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+h1,h2,h3{
+    line-height: 1.15;
+    margin-bottom: var(--space-small);
+}
+
+h1{
+    font-size: var(--title-size);
+    letter-spacing: -3px;
+}
+
+h2{
+    font-size: var(--section-size);
+}
+
+h3{
+    font-size: var(--heading-size);
+}
+
+p{
+    margin-bottom: var(--space-small);
+}
+
+a{
+    color: var(--accent);
+    text-underline-offset: 4px;
+}
+
+a:hover{
+    text-decoration-thickness: 3px;
+}
+
+/* Keyboard users can see which link is selected. */
+a:focus-visible{
+    outline: 3px solid var(--accent);
+    outline-offset: 5px;
+}
+
+img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption{
+    font-size: 13px;
+    color: var(--muted);
+    padding-top: var(--space-small);
+}
+
+.skip-link{
+    position: absolute;
+    left: 12px;
+    top: -100px;
+    padding: var(--space-small);
+    background: var(--paper);
+}
+
+.skip-link:focus{
+    top: 12px;
+}
+
+.site-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-medium);
+    max-width: 1168px;
+    margin: 0px auto;
+    padding: var(--space-medium);
+    border-bottom: 1px solid var(--line);
+}
+
+.site-name{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.site-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-medium);
+    list-style: none;
+}
+
+.site-nav a{
+    font-size: 15px;
+    color: var(--ink);
+}
+
+.site-nav a[aria-current="page"]{
+    font-weight: bold;
+    color: var(--accent);
+}
+
+main,.hero{
+    max-width: 1168px;
+    margin: 0px auto;
+    padding-left: var(--space-medium);
+    padding-right: var(--space-medium);
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--space-large);
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.hero img{
+    border: 1px solid var(--line);
+}
+
+.eyebrow{
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.lede{
+    font-size: 22px;
+    max-width: 36ch;
+}
+
+.button{
+    display: inline-block;
+    background: var(--accent);
+    color: var(--paper);
+    padding: 12px 20px;
+    margin-top: var(--space-small);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+main > section{
+    padding-top: var(--space-large);
+    padding-bottom: var(--space-large);
+}
+
+.section-head{
+    margin-bottom: var(--space-medium);
+}
+
+.history{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-large);
+}
+
+.history-copy p{
+    max-width: 65ch;
+    margin-bottom: var(--space-medium);
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space-medium);
+}
+
+.card{
+    background: white;
+    border: 1px solid var(--line);
+    padding: 16px;
+}
+
+.card img{
+    aspect-ratio: 2.2 / 1;
+    object-fit: contain;
+    background: var(--panel);
+}
+
+.card h3{
+    margin-top: var(--space-medium);
+}
+
+.card p{
+    font-size: 16px;
+}
+
+/* Four equal tracks let one panel span two columns and two rows. */
+.bento-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: var(--space-small);
+}
+
+.bento-grid article{
+    padding: var(--space-medium);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.feature-panel{
+    grid-column: span 2;
+    grid-row: span 2;
+    background: var(--accent-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-panel h3{
+    font-size: 40px;
+}
+
+.detail-panel{
+    background: white;
+}
+
+.summary-panel{
+    grid-column: span 2;
+    background: var(--panel);
+}
+
+.use-columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-large);
+}
+
+.site-footer{
+    background: var(--ink);
+    color: var(--paper);
+    padding: var(--space-medium);
+}
+
+.site-footer .inner{
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-medium);
+    max-width: 1120px;
+    margin: 0px auto;
+    font-size: 15px;
+}
+
+.site-footer a{
+    color: var(--paper);
+}
+
+.site-footer a:focus-visible{
+    outline-color: var(--paper);
+}
+
+/* A simple fallback keeps the text readable on narrow screens. */
+@media (max-width: 760px){
+    h1{
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .site-nav,.site-footer .inner{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero,.history,.cards,.use-columns,.bento-grid{
+        grid-template-columns: 1fr;
+        gap: var(--space-medium);
+    }
+
+    .feature-panel,.summary-panel{
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+/* Comic styling applies only to the bento page. */
+.bento-page{
+    --paper: #fff9e9;
+    --ink: #222638;
+    --accent: #a92724;
+    --accent-light: #ffdf73;
+    --line: #222638;
+    --panel: #e6eef7;
+}
+
+.bento-page h1,.bento-page h2,.bento-page h3{
+    font-family: "Arial Black", Arial, Helvetica, sans-serif;
+}
+
+.bento-page h1{
+    font-size: 64px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.title-note{
+    display: block;
+    font-size: 36px;
+    color: var(--accent);
+    letter-spacing: 0px;
+}
+
+.bento-page .site-nav{
+    border-bottom: 3px solid var(--ink);
+}
+
+.bento-page .button{
+    border: 2px solid var(--ink);
+    font-weight: bold;
+}
+
+/* These four text panels make a small comic-like introduction. */
+.hero-panels{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-small);
+}
+
+.hero-panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 110px;
+    padding: var(--space-medium);
+    margin: 0px;
+    background: white;
+    border: 3px solid var(--ink);
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.hero-action{
+    grid-row: span 2;
+    background: var(--accent-light);
+    font-size: 42px;
+    font-style: italic;
+}
+
+.hero-pause{
+    background: var(--panel);
+}
+
+.hero-reveal{
+    grid-column: span 2;
+    background: var(--accent);
+    color: var(--paper);
+}
+
+.comic-history-image{
+    width: 100%;
+    max-width: none;
+    margin: 0px auto;
+}
+
+.comic-history-image img{
+    border: 3px solid var(--ink);
+}
+
+.bento-page .card{
+    border: 2px solid var(--ink);
+}
+
+.bento-page .card img{
+    height: 230px;
+    aspect-ratio: auto;
+    object-fit: contain;
+    background: white;
+}
+
+.bento-page .card .eyebrow{
+    margin-top: var(--space-medium);
+    margin-bottom: 8px;
+}
+
+.bento-page .card h3{
+    margin-top: 0px;
+}
+
+.bento-page .bento-grid article{
+    border: 2px solid var(--ink);
+    border-radius: 0px;
+}
+
+.comic-note{
+    padding: var(--space-medium);
+    background: var(--panel);
+    border: 2px solid var(--ink);
+}
+
+.advice-heading{
+    margin-top: var(--space-large);
+}
+
+@media (max-width: 760px){
+    .bento-page h1{
+        font-size: 46px;
+    }
+
+    .hero-action{
+        font-size: 28px;
+    }
+
+    .hero-panel{
+        padding: var(--space-small);
+        font-size: 20px;
+    }
+}
+
+/* Simple paper pieces for the collage page. */
+.collage-page{
+    --paper: #f3ede1;
+    --ink: #292724;
+    --accent: #8a3029;
+    --line: #c8bdac;
+}
+
+.collage-page .hero{
+    gap: 24px;
+}
+
+.paper-note,.paper-photo{
+    background: #fffdf6;
+    padding: 24px;
+    border: 1px solid var(--ink);
+}
+
+.paper-photo{
+    margin-left: -36px;
+    border: 8px solid white;
+}
+
+.collage-page h1{
+    font-size: 56px;
+    letter-spacing: -2px;
+}
+
+.cut-word{
+    display: inline-block;
+    background: #edd36a;
+    padding: 5px 8px;
+}
+
+.dark-paper{
+    background: var(--ink);
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.collage-page .card{
+    padding: 18px;
+    border: 1px solid var(--ink);
+    background: #fffdf6;
+}
+
+.collage-page .card:nth-child(2){
+    background: #f5d5ce;
+}
+
+.collage-page .card:nth-child(3){
+    background: #dce7df;
+}
+
+.sources{
+    font-size: 14px;
+}
+
+.sources h2{
+    font-size: 25px;
+}
+
+.sources ul{
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+.sources li{
+    margin-bottom: 10px;
+}
+
+@media (max-width: 760px){
+    .paper-photo{
+        margin-left: 0px;
+    }
+
+    .collage-page h1{
+        font-size: 46px;
+    }
+}
+
+/* Photo references in the collage history. */
+.collage-page .collage-history{
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+
+.history-photo img{
+    max-height: 430px;
+    object-fit: contain;
+    background: #fffdf6;
+}
+
+.history-reference{
+    margin: 24px 0px;
+}
+
+.history-reference img{
+    max-height: 280px;
+    object-fit: contain;
+    background: #fffdf6;
+}
+
+@media (max-width: 760px){
+    .collage-page .collage-history{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Equal columns keep the history separate from the instructions. */
+.how-to-copy p,.how-to-steps li{
+    margin-bottom: 20px;
+}
+
+.how-to-steps{
+    padding-left: 24px;
+}
+
+.photo-note{
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+/* Show each collage reference in full, with no text over the image. */
+.collage-styles .card img{
+    height: 260px;
+    aspect-ratio: auto;
+    object-fit: contain;
+    background: white;
+}

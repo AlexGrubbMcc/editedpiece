@@ -1,10 +1,9 @@
-/* Shared styles use properties from the earlier practice projects. */
+/* Shared styles use the same methods as the earlier practice projects. */
 *{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
-
 body{
     background: #faf6ef;
     color: #26231e;
@@ -12,33 +11,16 @@ body{
     font-size: 18px;
     line-height: 1.65;
 }
-
 h1,h2,h3{
     line-height: 1.15;
+    font-weight: 600;
     margin-bottom: 12px;
 }
-
-h1{
-    font-size: 64px;
-    letter-spacing: -2px;
-}
-
-h2{
-    font-size: 32px;
-}
-
-h3{
-    font-size: 23px;
-}
-
-p{
-    margin-bottom: 12px;
-}
-
-a{
-    color: #a73e25;
-}
-
+h1{ font-size: 64px; letter-spacing: -2px; }
+h2{ font-size: 32px; }
+h3{ font-size: 23px; }
+p{ margin-bottom: 12px; }
+a{ color: #a92724; }
 img{
     display: block;
     width: 100%;
@@ -46,112 +28,61 @@ img{
     height: auto;
 }
 
-.skip-link{
-    display: block;
-    max-width: 1168px;
-    margin: 0px auto;
-    padding: 12px 24px;
-    font-size: 14px;
-}
-
-.site-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
+/* Shared page width and spacing. */
+.skip-link,.site-nav,main,.hero{
     max-width: 1168px;
     margin: 0px auto;
     padding: 24px;
-    border-top: 1px solid #d7cfc2;
 }
-
-.site-name{
-    font-size: 15px;
-    font-weight: 600;
-    margin: 0px;
+.skip-link{
+    display: block;
+    padding: 12px 24px;
+    font-size: 14px;
 }
-
-.site-nav ul{
+.site-nav,.site-nav ul,.site-footer .inner{
     display: flex;
     gap: 24px;
-    list-style: none;
 }
-
-.site-nav a{
-    color: #26231e;
-    font-size: 15px;
+.site-nav,.site-footer .inner{
+    justify-content: space-between;
 }
-
-.site-nav .current-page{
-    font-weight: 600;
-    color: #a73e25;
-}
-
-main,.hero{
-    max-width: 1168px;
-    margin: 0px auto;
-    padding: 0px 24px;
-}
-
-.hero{
-    display: grid;
-    grid-template: auto / 1fr 1fr;
+.site-nav{
     align-items: center;
-    gap: 48px;
-    padding: 64px 24px;
+    border-top: 1px solid #26231e;
 }
-
-.hero img{
-    border: 1px solid #d7cfc2;
-}
-
-.lede{
-    font-size: 22px;
-    max-width: 36ch;
-}
-
+.site-nav ul{ list-style: none; }
+.site-name,.site-nav a,.site-footer .inner{ font-size: 15px; }
+.site-name{ margin: 0px; }
+.site-name,.site-nav .current-page,.book-title,.step-label{ font-weight: 600; }
+.site-nav a{ color: #26231e; }
+.site-nav .current-page{ color: #a92724; }
 .button{
     display: inline-block;
-    background: #a73e25;
-    color: #faf6ef;
+    background: #a92724;
+    color: white;
     padding: 12px 20px;
     margin-top: 12px;
     text-decoration: none;
     font-size: 16px;
 }
+.lede{ font-size: 22px; max-width: 36ch; }
+.page-section{ padding: 48px 0px; }
+.section-head{ margin-bottom: 24px; }
+.history-copy p{ max-width: 65ch; margin-bottom: 24px; }
 
-.page-section{
-    padding: 48px 0px;
-}
-
-.section-head{
-    margin-bottom: 24px;
-}
-
-.history{
+/* Grids arrange the content. Flexbox centers full images. */
+.hero,.history,.cards,.bento-grid,.use-columns,.hero-panels{
     display: grid;
-    grid-template: auto / 1fr 2fr;
-    gap: 48px;
-}
-
-.history-copy p{
-    max-width: 65ch;
-    margin-bottom: 24px;
-}
-
-.cards{
-    display: grid;
-    grid-template: auto / 1fr 1fr 1fr;
     gap: 24px;
 }
-
-.card{
-    background: white;
-    border: 1px solid #d7cfc2;
-    padding: 16px;
+.hero,.use-columns,.hero-panels{
+    grid-template: auto / 1fr 1fr;
 }
-
-/* A flex container centers each full picture without cropping it. */
+.hero,.history,.use-columns{ gap: 48px; }
+.hero{ align-items: center; padding: 64px 24px; }
+.history{ grid-template: auto / 1fr 2fr; }
+.cards{ grid-template: auto / 1fr 1fr 1fr; }
+.card{ background: white; border: 1px solid #26231e; padding: 16px; }
 .card-image{
     display: flex;
     align-items: center;
@@ -159,131 +90,37 @@ main,.hero{
     height: 230px;
     background: white;
 }
-
-.card-image a{
-    width: 100%;
-}
-
-.card h3{
-    margin-top: 24px;
-}
-
-.card p{
-    font-size: 16px;
-}
-
+.card-image a{ width: 100%; }
+.card h3{ margin-top: 24px; }
+.card p,.photo-note{ font-size: 16px; }
 .eyebrow{
     font-size: 13px;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 600;
-    color: #a73e25;
-}
-
-.bento-grid{
-    display: grid;
-    grid-template: auto / 1fr 1fr;
-    gap: 12px;
-}
-
-.bento-grid article{
-    padding: 24px;
-    border: 2px solid #222638;
-}
-
-.feature-panel{
-    grid-column: span 2;
-    background: #ffdf73;
-}
-
-.feature-panel h3{
-    font-size: 40px;
-}
-
-.detail-panel{
-    background: white;
-}
-
-.summary-panel{
-    grid-column: span 2;
-    background: #e6eef7;
-}
-
-.use-columns{
-    display: grid;
-    grid-template: auto / 1fr 1fr;
-    gap: 48px;
-}
-
-.site-footer{
-    background: #26231e;
-    color: #faf6ef;
-    padding: 24px;
-}
-
-.site-footer .inner{
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-    max-width: 1120px;
-    margin: 0px auto;
-    font-size: 15px;
-}
-
-.site-footer a{
-    color: white;
-}
-
-/* Comic colors apply only to the bento page. */
-.bento-page{
-    background: #fff9e9;
-    color: #222638;
-}
-
-.bento-page h1,.bento-page h2,.bento-page h3{
-    font-weight: 600;
-}
-
-.bento-page h1{
-    text-transform: uppercase;
-}
-
-.bento-page a{
     color: #a92724;
 }
+.bento-grid,.hero-panels{ gap: 12px; }
+.bento-grid{ grid-template: auto / 1fr 1fr 1fr 1fr; }
+.bento-grid article,.comic-note{ padding: 24px; border: 2px solid #222638; }
+.feature-panel,.summary-panel,.hero-reveal{ grid-column: span 2; }
+.feature-panel{ grid-row: span 2; background: #ffdf73; }
+.feature-panel h3{ font-size: 40px; }
+.detail-panel{ background: white; }
+.summary-panel,.comic-note{ background: #e6eef7; }
+.advice-heading{ margin-top: 48px; }
 
-.bento-page .site-nav{
-    border-top: 3px solid #222638;
-}
-
-.bento-page .site-nav a{
-    color: #222638;
-}
-
-.bento-page .site-nav .current-page{
-    color: #a92724;
-}
-
+/* Comics keep strong borders and colored panels. */
+.bento-page{ background: #fff9e9; }
+.bento-page h1{ text-transform: uppercase; }
 .title-note{
     display: block;
     font-size: 36px;
     color: #a92724;
     letter-spacing: 0px;
 }
-
-.bento-page .button{
-    background: #a92724;
-    color: #fff9e9;
-    border: 2px solid #222638;
-    font-weight: 600;
-}
-
-.hero-panels{
-    display: grid;
-    grid-template: auto / 1fr 1fr;
-    gap: 12px;
-}
-
+.bento-page .site-nav{ border-top: 3px solid #222638; }
+.bento-page .button,.bento-page .card{ border: 2px solid #222638; }
 .hero-panel{
     display: flex;
     align-items: center;
@@ -297,216 +134,56 @@ main,.hero{
     font-size: 23px;
     font-weight: 600;
 }
+.hero-action{ grid-row: span 2; background: #ffdf73; font-size: 42px; }
+.hero-pause{ background: #e6eef7; }
+.hero-reveal{ background: #a92724; color: white; }
+.comic-history-image img{ border: 3px solid #222638; }
+.bento-page .card .eyebrow{ margin-top: 24px; margin-bottom: 8px; }
+.bento-page .card h3{ margin-top: 0px; }
 
-.hero-action{
-    grid-column: span 2;
-    background: #ffdf73;
-    font-size: 42px;
-}
-
-.hero-pause{
-    background: #e6eef7;
-}
-
-.hero-reveal{
-    grid-column: span 2;
-    background: #a92724;
-    color: #fff9e9;
-}
-
-.comic-history-image{
-    width: 100%;
-    margin: 0px auto;
-}
-
-.comic-history-image img{
-    border: 3px solid #222638;
-}
-
-.bento-page .card{
-    border: 2px solid #222638;
-}
-
-.bento-page .card .eyebrow{
-    margin-top: 24px;
-    margin-bottom: 8px;
-}
-
-.bento-page .card h3{
-    margin-top: 0px;
-}
-
-.comic-note{
-    padding: 24px;
-    background: #e6eef7;
-    border: 2px solid #222638;
-}
-
-.advice-heading{
-    margin-top: 48px;
-}
-
-.bento-page .site-footer{
-    background: #222638;
-    color: #fff9e9;
-}
-
-.bento-page .site-footer a{
-    color: #fff9e9;
-}
-
-/* Straight paper pieces use the same layout methods. */
-.collage-page{
-    background: #f3ede1;
-    color: #292724;
-}
-
-.collage-page a{
-    color: #8a3029;
-}
-
-.collage-page .site-nav{
-    border-top: 1px solid #c8bdac;
-}
-
-.collage-page .site-nav a{
-    color: #292724;
-}
-
-.collage-page .site-nav .current-page{
-    color: #8a3029;
-}
-
-.collage-page .button{
-    background: #8a3029;
-    color: white;
-}
-
-.collage-page .hero{
-    gap: 24px;
-}
-
+/* Collage uses straight paper pieces and three named card colors. */
+.collage-page{ background: #f3ede1; }
+.collage-page .hero{ gap: 24px; }
 .paper-note,.paper-photo{
     background: #fffdf6;
     padding: 24px;
-    border: 1px solid #292724;
+    border: 1px solid #26231e;
 }
-
-.paper-photo{
-    margin-left: 0px;
-    border: 8px solid white;
-}
-
-.collage-page h1{
-    font-size: 56px;
-}
-
-.cut-word{
-    display: inline-block;
-    background: #edd36a;
-    padding: 5px 8px;
-}
-
+.paper-photo{ border: 8px solid white; }
+.collage-page h1{ font-size: 56px; }
+.cut-word{ display: inline-block; background: #edd36a; padding: 5px 8px; }
 .dark-paper{
-    background: #292724;
+    background: #26231e;
     color: white;
     font-family: Georgia, "Times New Roman", serif;
 }
-
-.collage-page .card{
-    padding: 18px;
-    border: 1px solid #292724;
-    background: #fffdf6;
-}
-
-.collage-page .punk-card{
-    background: #f5d5ce;
-}
-
-.collage-page .scrapbook-card{
-    background: #dce7df;
-}
-
-.collage-styles .card-image{
-    height: 260px;
-}
-
-.zine-card img{
-    max-width: 260px;
-}
-
-.punk-card img{
-    max-width: 200px;
-}
-
-.collage-history{
-    grid-template: auto / 1fr 1fr;
-}
-
-.history-photo img{
-    max-width: 330px;
-    margin: 0px auto;
-}
-
-.history-reference{
-    margin: 24px 0px;
-}
-
-.history-reference img{
-    max-width: 320px;
-    margin: 0px auto;
-}
-
-.how-to-copy p,.how-to-steps li{
-    margin-bottom: 20px;
-}
-
-.how-to-steps{
-    margin-left: 24px;
-}
-
-.photo-note{
-    margin-top: 16px;
-    font-size: 16px;
-}
-
+.collage-page .card{ padding: 18px; background: #fffdf6; }
+.collage-page .punk-card{ background: #f5d5ce; }
+.collage-page .scrapbook-card{ background: #dce7df; }
+.collage-styles .card-image{ height: 260px; }
+.zine-card img{ max-width: 260px; }
+.punk-card img{ max-width: 200px; }
+.collage-history{ grid-template: auto / 1fr 1fr; }
+.history-photo img,.history-reference img{ margin: 0px auto; }
+.history-photo img{ max-width: 330px; }
+.history-reference{ margin: 24px 0px; }
+.history-reference img{ max-width: 320px; }
+.how-to-copy p,.how-to-steps li{ margin-bottom: 20px; }
+.how-to-steps{ margin-left: 24px; }
+.photo-note{ margin-top: 16px; }
 .image-caption{
     margin: 0px;
     font-size: 13px;
     color: #625b52;
     padding-top: 12px;
 }
+.history-copy .image-caption{ margin-bottom: 0px; }
 
-.history-copy .image-caption{
-    margin-bottom: 0px;
-}
-
-.book-title,.step-label{
-    font-weight: 600;
-}
-
-.sources{
-    font-size: 14px;
-}
-
-.sources h2{
-    font-size: 25px;
-}
-
-.sources ul{
-    margin-left: 20px;
-    margin-bottom: 16px;
-}
-
-.sources li{
-    margin-bottom: 10px;
-}
-
-.collage-page .site-footer{
-    background: #292724;
-    color: #f3ede1;
-}
-
-.collage-page .site-footer a{
-    color: #f3ede1;
-}
+/* Credits and footer. */
+.sources{ font-size: 14px; }
+.sources h2{ font-size: 25px; }
+.sources ul{ margin-left: 20px; margin-bottom: 16px; }
+.sources li{ margin-bottom: 10px; }
+.site-footer{ background: #26231e; color: white; padding: 24px; }
+.site-footer .inner{ max-width: 1120px; margin: 0px auto; }
+.site-footer a{ color: white; }

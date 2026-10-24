@@ -8,11 +8,11 @@
 </head>
 <body id="top" class="collage-page">
     <a class="skip-link" href="#content">Skip to content</a>
-    <nav class="site-nav" aria-label="Main navigation">
+    <nav class="site-nav">
         <p class="site-name">Type / Image / Layout</p>
         <ul>
             <li><a href="index.html">Bento Box</a></li>
-            <li><a href="collage.html" aria-current="page">Collage</a></li>
+            <li><a href="collage.html" class="current-page">Collage</a></li>
             <li><a href="#history">History</a></li>
             <li><a href="#examples">Styles</a></li>
         </ul>
@@ -30,13 +30,13 @@
         </aside>
     </header>
     <main id="content">
-        <section class="history collage-history" id="history">
+        <section class="page-section history collage-history" id="history">
             <article class="history-copy">
                 <h2>A short history of collage</h2>
                 <p>Collage joins paper, photographs, and words on one surface. Picasso and Braque used pasted materials in their Cubist work in 1912. Artists such as Hannah Höch later combined photographs to create new meanings.</p>
                 <p>Do-it-yourself zines brought a similar freedom to publishing. People could mix personal stories, images, and cutout words without a large publisher. Punk communities used zines to share music and local news.</p>
                 <aside class="history-photo">
-                    <img src="images/flipside.jpg" alt="The cover of Flipside issue 51, with a band photograph and layered strips of text." loading="lazy">
+                    <img src="images/flipside.jpg" alt="The cover of Flipside issue 51, with a band photograph and layered strips of text.">
                     <p class="image-caption"><span class="book-title">Flipside</span>, issue 51, Winter 1986.</p>
                 </aside>
                 <p class="photo-note">This cover brings a band photograph and separate strips of lettering together. The overlapping pieces help one image carry several kinds of information.</p>
@@ -52,35 +52,41 @@
                     <li><span class="step-label">Finish in layers.</span> Glue the background pieces first, then the main image and smaller details. Step back and remove anything that distracts from your theme.</li>
                 </ol>
                 <aside class="history-reference">
-                    <img src="images/personal-zines.jpg" alt="Three personal zines with different illustrated covers from Norwich University of the Arts Library." loading="lazy">
+                    <img src="images/personal-zines.jpg" alt="Three personal zines with different illustrated covers from Norwich University of the Arts Library.">
                     <p class="image-caption">Personal publications can combine a clear title, illustrations, and an individual point of view.</p>
                 </aside>
             </section>
         </section>
-        <section id="examples">
+        <section class="page-section" id="examples">
             <header class="section-head">
                 <h2>Different pieces, different moods</h2>
                 <p>These small studies show a few visual ideas from each style.</p>
             </header>
             <div class="cards collage-styles">
-                <article class="card">
-                    <img src="images/personal-zines.jpg" alt="Three personal zines with illustrated covers from Norwich University of the Arts Library." loading="lazy">
+                <article class="card zine-card">
+                    <aside class="card-image">
+                        <img src="images/personal-zines.jpg" alt="Three personal zines with illustrated covers from Norwich University of the Arts Library.">
+                    </aside>
                     <h3>Zine collage</h3>
                     <p>A zine is a small, self-published publication. A collage-style zine can mix personal notes, drawings, photographs, and cutout words. It can feel like a collection of someone's thoughts rather than a polished magazine.</p>
                 </article>
-                <article class="card">
-                    <img src="images/flipside.jpg" alt="Flipside issue 51, showing a band photograph and layered strips of lettering." loading="lazy">
+                <article class="card punk-card">
+                    <aside class="card-image">
+                        <img src="images/flipside.jpg" alt="Flipside issue 51, showing a band photograph and layered strips of lettering.">
+                    </aside>
                     <h3>Punk collage</h3>
                     <p>Punk collage often feels loud and direct. Photocopied images, bold headlines, and mismatched cutout letters suit posters and music zines. Inexpensive materials and do-it-yourself production are part of its history.</p>
                 </article>
-                <article class="card">
-                    <img src="images/mat.png" alt="Mat's scrapbook-inspired website with cutout letters and small photographed objects." loading="lazy">
+                <article class="card scrapbook-card">
+                    <aside class="card-image">
+                        <img src="images/mat.png" alt="Mat's scrapbook-inspired website with cutout letters and small photographed objects.">
+                    </aside>
                     <h3>Scrapbook collage</h3>
                     <p>Scrapbook collage collects pictures, paper scraps, and short notes around a memory or interest. It can be as simple as two photos and a caption on colored paper.</p>
                 </article>
             </div>
         </section>
-        <section id="uses">
+        <section class="page-section" id="uses">
             <header class="section-head">
                 <h2>What works, and what gets in the way</h2>
             </header>
@@ -95,7 +101,7 @@
                 </article>
             </div>
         </section>
-        <section class="sources" id="sources">
+        <section class="page-section sources" id="sources">
             <h2>Sources and image credits</h2>
             <ul>
                 <li><a href="https://assets.moma.org/documents/moma_catalogue_1880_300062228.pdf">MoMA: The Art of Assemblage</a> — early modern collage and Cubist experiments.</li>

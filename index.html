@@ -8,10 +8,10 @@
 </head>
 <body id="top" class="bento-page">
     <a class="skip-link" href="#content">Skip to content</a>
-    <nav class="site-nav" aria-label="Main navigation">
+    <nav class="site-nav">
         <p class="site-name">Type / Image / Layout</p>
         <ul>
-            <li><a href="index.html" aria-current="page">Bento Box</a></li>
+            <li><a href="index.html" class="current-page">Bento Box</a></li>
             <li><a href="collage.html">Collage</a></li>
             <li><a href="#history">History</a></li>
             <li><a href="#examples">Examples</a></li>
@@ -24,7 +24,7 @@
             <p>A small panel can build tension. A big one can make a moment land. The layout is part of the storytelling.</p>
             <a class="button" href="#history">Turn to the history</a>
         </section>
-        <aside class="hero-panels" aria-label="Four-panel storytelling study">
+        <aside class="hero-panels">
             <p class="hero-panel hero-action">PANELS!</p>
             <p class="hero-panel">Words + pictures</p>
             <p class="hero-panel hero-pause">A moment to pause...</p>
@@ -32,7 +32,7 @@
         </aside>
     </header>
     <main id="content">
-        <section class="history" id="history">
+        <section class="page-section history" id="history">
             <aside class="comic-history-image">
                 <a href="https://commons.wikimedia.org/wiki/File:Vieuxbois1.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Vieuxbois1.jpg" alt="A dream illustration from Rodolphe Töpffer's Histoire de Mr. Vieux Bois."></a>
                 
@@ -46,33 +46,39 @@
                 <p>During the 2000s, Korean webtoons developed around digital reading. A long scrolling screen offered a different canvas from a printed page. Today, many webtoons use vertical space to delay a reveal or separate moments. This does not mean all manhwa scrolls, or that every manga follows the same layout.</p>
             </article>
         </section>
-        <section id="examples">
+        <section class="page-section" id="examples">
             <header class="section-head">
                 <h2>Comics, manga, and manhwa</h2>
                 <p>These are examples of storytelling traditions, not three separate genres or fixed rules.</p>
             </header>
             <div class="cards">
                 <article class="card">
-                    <a href="images/spider-man.png"><img src="images/spider-man.png" alt="Marvel's Amazing Fantasy number 15 page showing Spider-Man's debut cover and issue credits." loading="lazy"></a>
+                    <aside class="card-image">
+                        <a href="images/spider-man.png"><img src="images/spider-man.png" alt="Marvel's Amazing Fantasy number 15 page showing Spider-Man's debut cover and issue credits."></a>
+                    </aside>
                     <p class="eyebrow">Comics / Spider-Man</p>
                     <h3>Amazing Fantasy #15</h3>
                     <p>Spider-Man first appeared in this 1962 comic, written by Stan Lee and drawn by Steve Ditko. Peter Parker gains powers from a radioactive spider and learns that being a hero brings responsibility. The printed story uses panels to move between action, dialogue, and reactions.</p>
                 </article>
                 <article class="card">
-                    <a href="images/one-piece.png"><img src="images/one-piece.png" alt="VIZ's official One Piece series page with artwork featuring Luffy." loading="lazy"></a>
+                    <aside class="card-image">
+                        <a href="images/one-piece.png"><img src="images/one-piece.png" alt="VIZ's official One Piece series page with artwork featuring Luffy."></a>
+                    </aside>
                     <p class="eyebrow">Manga</p>
                     <h3>One Piece</h3>
                     <p>Eiichiro Oda's manga follows Monkey D. Luffy and his pirate crew as they search for the One Piece treasure. Its Japanese reading order runs from right to left. Small panels can carry conversations and reactions, while larger scenes give adventures more room.</p>
                 </article>
                 <article class="card">
-                    <a href="images/omniscient-reader.png"><img src="images/omniscient-reader.png" alt="The official Omniscient Reader WEBTOON page showing series artwork and creator credits." loading="lazy"></a>
+                    <aside class="card-image">
+                        <a href="images/omniscient-reader.png"><img src="images/omniscient-reader.png" alt="The official Omniscient Reader WEBTOON page showing series artwork and creator credits."></a>
+                    </aside>
                     <p class="eyebrow">Manhwa / Webtoon</p>
                     <h3>Omniscient Reader's Viewpoint</h3>
                     <p>Known as <span class="book-title">Omniscient Reader</span> on WEBTOON, this adaptation credits singNsong, UMI, and Sleepy-C. Dokja's favorite web novel becomes reality. The vertical format lets readers move down through the story, with space between images helping separate each moment.</p>
                 </article>
             </div>
         </section>
-        <section id="demonstration">
+        <section class="page-section" id="demonstration">
             <header class="section-head">
                 <h2>Why call it a bento box?</h2>
                 <p>A bento meal box holds different things in separate compartments. This is a useful comparison for panels arranged together, not a historical name for all comic layouts.</p>
@@ -97,7 +103,7 @@
                 </article>
             </div>
         </section>
-        <section id="uses">
+        <section class="page-section" id="uses">
             <header class="section-head">
                 <h2>Stretching the form</h2>
             </header>
@@ -125,7 +131,7 @@
                 </article>
             </div>
         </section>
-        <section class="sources" id="sources">
+        <section class="page-section sources" id="sources">
             <h2>Sources and image credits</h2>
             <ul>
                 <li><a href="https://www.unige.ch/presse/static/ideesgenie/PDF17TOPFFER.pdf">University of Geneva: Töpffer timeline</a> — Vieux Bois drawn in 1827 and published in 1837.</li>

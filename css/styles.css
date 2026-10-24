@@ -1,29 +1,13 @@
-/* Shared values: change these once to update both pages. */
-:root{
-    --paper: #faf6ef;
-    --ink: #26231e;
-    --muted: #625b52;
-    --line: #d7cfc2;
-    --panel: #eee7dc;
-    --accent: #a73e25;
-    --accent-light: #f1d2b5;
-    --space-small: 12px;
-    --space-medium: 24px;
-    --space-large: 48px;
-    --title-size: 72px;
-    --section-size: 32px;
-    --heading-size: 23px;
-}
-
+/* Shared styles use properties from the earlier practice projects. */
 *{
     box-sizing: border-box;
-    padding: 0px;
     margin: 0px;
+    padding: 0px;
 }
 
 body{
-    background: var(--paper);
-    color: var(--ink);
+    background: #faf6ef;
+    color: #26231e;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 1.65;
@@ -31,39 +15,28 @@ body{
 
 h1,h2,h3{
     line-height: 1.15;
-    margin-bottom: var(--space-small);
+    margin-bottom: 12px;
 }
 
 h1{
-    font-size: var(--title-size);
-    letter-spacing: -3px;
+    font-size: 64px;
+    letter-spacing: -2px;
 }
 
 h2{
-    font-size: var(--section-size);
+    font-size: 32px;
 }
 
 h3{
-    font-size: var(--heading-size);
+    font-size: 23px;
 }
 
 p{
-    margin-bottom: var(--space-small);
+    margin-bottom: 12px;
 }
 
 a{
-    color: var(--accent);
-    text-underline-offset: 4px;
-}
-
-a:hover{
-    text-decoration-thickness: 3px;
-}
-
-/* Keyboard users can see which link is selected. */
-a:focus-visible{
-    outline: 3px solid var(--accent);
-    outline-offset: 5px;
+    color: #a73e25;
 }
 
 img{
@@ -73,85 +46,63 @@ img{
     height: auto;
 }
 
-.image-caption {
-  margin: 0;
-    font-size: 13px;
-    color: var(--muted);
-    padding-top: var(--space-small);
-}
-
 .skip-link{
-    position: absolute;
-    left: 12px;
-    top: -100px;
-    padding: var(--space-small);
-    background: var(--paper);
-}
-
-.skip-link:focus{
-    top: 12px;
+    display: block;
+    max-width: 1168px;
+    margin: 0px auto;
+    padding: 12px 24px;
+    font-size: 14px;
 }
 
 .site-nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: var(--space-medium);
+    gap: 24px;
     max-width: 1168px;
     margin: 0px auto;
-    padding: var(--space-medium);
-    border-bottom: 1px solid var(--line);
+    padding: 24px;
+    border-top: 1px solid #d7cfc2;
 }
 
 .site-name{
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 600;
     margin: 0px;
 }
 
 .site-nav ul{
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-medium);
+    gap: 24px;
     list-style: none;
 }
 
 .site-nav a{
+    color: #26231e;
     font-size: 15px;
-    color: var(--ink);
 }
 
-.site-nav a[aria-current="page"]{
-    font-weight: bold;
-    color: var(--accent);
+.site-nav .current-page{
+    font-weight: 600;
+    color: #a73e25;
 }
 
 main,.hero{
     max-width: 1168px;
     margin: 0px auto;
-    padding-left: var(--space-medium);
-    padding-right: var(--space-medium);
+    padding: 0px 24px;
 }
 
 .hero{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template: auto / 1fr 1fr;
     align-items: center;
-    gap: var(--space-large);
-    padding-top: 64px;
-    padding-bottom: 64px;
+    gap: 48px;
+    padding: 64px 24px;
 }
 
 .hero img{
-    border: 1px solid var(--line);
-}
-
-.eyebrow{
-    font-size: 13px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: bold;
+    border: 1px solid #d7cfc2;
 }
 
 .lede{
@@ -161,80 +112,88 @@ main,.hero{
 
 .button{
     display: inline-block;
-    background: var(--accent);
-    color: var(--paper);
+    background: #a73e25;
+    color: #faf6ef;
     padding: 12px 20px;
-    margin-top: var(--space-small);
+    margin-top: 12px;
     text-decoration: none;
     font-size: 16px;
 }
 
-main > section{
-    padding-top: var(--space-large);
-    padding-bottom: var(--space-large);
+.page-section{
+    padding: 48px 0px;
 }
 
 .section-head{
-    margin-bottom: var(--space-medium);
+    margin-bottom: 24px;
 }
 
 .history{
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: var(--space-large);
+    grid-template: auto / 1fr 2fr;
+    gap: 48px;
 }
 
 .history-copy p{
     max-width: 65ch;
-    margin-bottom: var(--space-medium);
+    margin-bottom: 24px;
 }
 
 .cards{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--space-medium);
+    grid-template: auto / 1fr 1fr 1fr;
+    gap: 24px;
 }
 
 .card{
     background: white;
-    border: 1px solid var(--line);
+    border: 1px solid #d7cfc2;
     padding: 16px;
 }
 
-.card img{
-    aspect-ratio: 2.2 / 1;
-    object-fit: contain;
-    background: var(--panel);
+/* A flex container centers each full picture without cropping it. */
+.card-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 230px;
+    background: white;
+}
+
+.card-image a{
+    width: 100%;
 }
 
 .card h3{
-    margin-top: var(--space-medium);
+    margin-top: 24px;
 }
 
 .card p{
     font-size: 16px;
 }
 
-/* Four equal tracks let one panel span two columns and two rows. */
+.eyebrow{
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #a73e25;
+}
+
 .bento-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: var(--space-small);
+    grid-template: auto / 1fr 1fr;
+    gap: 12px;
 }
 
 .bento-grid article{
-    padding: var(--space-medium);
-    border: 1px solid var(--line);
-    border-radius: 8px;
+    padding: 24px;
+    border: 2px solid #222638;
 }
 
 .feature-panel{
     grid-column: span 2;
-    grid-row: span 2;
-    background: var(--accent-light);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background: #ffdf73;
 }
 
 .feature-panel h3{
@@ -247,102 +206,82 @@ main > section{
 
 .summary-panel{
     grid-column: span 2;
-    background: var(--panel);
+    background: #e6eef7;
 }
 
 .use-columns{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-large);
+    grid-template: auto / 1fr 1fr;
+    gap: 48px;
 }
 
 .site-footer{
-    background: var(--ink);
-    color: var(--paper);
-    padding: var(--space-medium);
+    background: #26231e;
+    color: #faf6ef;
+    padding: 24px;
 }
 
 .site-footer .inner{
     display: flex;
     justify-content: space-between;
-    gap: var(--space-medium);
+    gap: 24px;
     max-width: 1120px;
     margin: 0px auto;
     font-size: 15px;
 }
 
 .site-footer a{
-    color: var(--paper);
+    color: white;
 }
 
-.site-footer a:focus-visible{
-    outline-color: var(--paper);
-}
-
-/* A simple fallback keeps the text readable on narrow screens. */
-@media (max-width: 760px){
-    h1{
-        font-size: 48px;
-        letter-spacing: -2px;
-    }
-
-    .site-nav,.site-footer .inner{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .hero,.history,.cards,.use-columns,.bento-grid{
-        grid-template-columns: 1fr;
-        gap: var(--space-medium);
-    }
-
-    .feature-panel,.summary-panel{
-        grid-column: auto;
-        grid-row: auto;
-    }
-}
-
-/* Comic styling applies only to the bento page. */
+/* Comic colors apply only to the bento page. */
 .bento-page{
-    --paper: #fff9e9;
-    --ink: #222638;
-    --accent: #a92724;
-    --accent-light: #ffdf73;
-    --line: #222638;
-    --panel: #e6eef7;
+    background: #fff9e9;
+    color: #222638;
 }
 
 .bento-page h1,.bento-page h2,.bento-page h3{
-    font-family: "Arial Black", Arial, Helvetica, sans-serif;
+    font-weight: 600;
 }
 
 .bento-page h1{
-    font-size: 64px;
     text-transform: uppercase;
-    letter-spacing: -2px;
+}
+
+.bento-page a{
+    color: #a92724;
+}
+
+.bento-page .site-nav{
+    border-top: 3px solid #222638;
+}
+
+.bento-page .site-nav a{
+    color: #222638;
+}
+
+.bento-page .site-nav .current-page{
+    color: #a92724;
 }
 
 .title-note{
     display: block;
     font-size: 36px;
-    color: var(--accent);
+    color: #a92724;
     letter-spacing: 0px;
 }
 
-.bento-page .site-nav{
-    border-bottom: 3px solid var(--ink);
-}
-
 .bento-page .button{
-    border: 2px solid var(--ink);
-    font-weight: bold;
+    background: #a92724;
+    color: #fff9e9;
+    border: 2px solid #222638;
+    font-weight: 600;
 }
 
-/* These four text panels make a small comic-like introduction. */
 .hero-panels{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-small);
+    grid-template: auto / 1fr 1fr;
+    gap: 12px;
 }
 
 .hero-panel{
@@ -351,54 +290,45 @@ main > section{
     justify-content: center;
     text-align: center;
     min-height: 110px;
-    padding: var(--space-medium);
+    padding: 24px;
     margin: 0px;
     background: white;
-    border: 3px solid var(--ink);
+    border: 3px solid #222638;
     font-size: 23px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .hero-action{
-    grid-row: span 2;
-    background: var(--accent-light);
+    grid-column: span 2;
+    background: #ffdf73;
     font-size: 42px;
-    font-style: italic;
 }
 
 .hero-pause{
-    background: var(--panel);
+    background: #e6eef7;
 }
 
 .hero-reveal{
     grid-column: span 2;
-    background: var(--accent);
-    color: var(--paper);
+    background: #a92724;
+    color: #fff9e9;
 }
 
 .comic-history-image{
     width: 100%;
-    max-width: none;
     margin: 0px auto;
 }
 
 .comic-history-image img{
-    border: 3px solid var(--ink);
+    border: 3px solid #222638;
 }
 
 .bento-page .card{
-    border: 2px solid var(--ink);
-}
-
-.bento-page .card img{
-    height: 230px;
-    aspect-ratio: auto;
-    object-fit: contain;
-    background: white;
+    border: 2px solid #222638;
 }
 
 .bento-page .card .eyebrow{
-    margin-top: var(--space-medium);
+    margin-top: 24px;
     margin-bottom: 8px;
 }
 
@@ -406,42 +336,50 @@ main > section{
     margin-top: 0px;
 }
 
-.bento-page .bento-grid article{
-    border: 2px solid var(--ink);
-    border-radius: 0px;
-}
-
 .comic-note{
-    padding: var(--space-medium);
-    background: var(--panel);
-    border: 2px solid var(--ink);
+    padding: 24px;
+    background: #e6eef7;
+    border: 2px solid #222638;
 }
 
 .advice-heading{
-    margin-top: var(--space-large);
+    margin-top: 48px;
 }
 
-@media (max-width: 760px){
-    .bento-page h1{
-        font-size: 46px;
-    }
-
-    .hero-action{
-        font-size: 28px;
-    }
-
-    .hero-panel{
-        padding: var(--space-small);
-        font-size: 20px;
-    }
+.bento-page .site-footer{
+    background: #222638;
+    color: #fff9e9;
 }
 
-/* Simple paper pieces for the collage page. */
+.bento-page .site-footer a{
+    color: #fff9e9;
+}
+
+/* Straight paper pieces use the same layout methods. */
 .collage-page{
-    --paper: #f3ede1;
-    --ink: #292724;
-    --accent: #8a3029;
-    --line: #c8bdac;
+    background: #f3ede1;
+    color: #292724;
+}
+
+.collage-page a{
+    color: #8a3029;
+}
+
+.collage-page .site-nav{
+    border-top: 1px solid #c8bdac;
+}
+
+.collage-page .site-nav a{
+    color: #292724;
+}
+
+.collage-page .site-nav .current-page{
+    color: #8a3029;
+}
+
+.collage-page .button{
+    background: #8a3029;
+    color: white;
 }
 
 .collage-page .hero{
@@ -451,17 +389,16 @@ main > section{
 .paper-note,.paper-photo{
     background: #fffdf6;
     padding: 24px;
-    border: 1px solid var(--ink);
+    border: 1px solid #292724;
 }
 
 .paper-photo{
-    margin-left: -36px;
+    margin-left: 0px;
     border: 8px solid white;
 }
 
 .collage-page h1{
     font-size: 56px;
-    letter-spacing: -2px;
 }
 
 .cut-word{
@@ -471,23 +408,81 @@ main > section{
 }
 
 .dark-paper{
-    background: var(--ink);
+    background: #292724;
     color: white;
     font-family: Georgia, "Times New Roman", serif;
 }
 
 .collage-page .card{
     padding: 18px;
-    border: 1px solid var(--ink);
+    border: 1px solid #292724;
     background: #fffdf6;
 }
 
-.collage-page .card:nth-child(2){
+.collage-page .punk-card{
     background: #f5d5ce;
 }
 
-.collage-page .card:nth-child(3){
+.collage-page .scrapbook-card{
     background: #dce7df;
+}
+
+.collage-styles .card-image{
+    height: 260px;
+}
+
+.zine-card img{
+    max-width: 260px;
+}
+
+.punk-card img{
+    max-width: 200px;
+}
+
+.collage-history{
+    grid-template: auto / 1fr 1fr;
+}
+
+.history-photo img{
+    max-width: 330px;
+    margin: 0px auto;
+}
+
+.history-reference{
+    margin: 24px 0px;
+}
+
+.history-reference img{
+    max-width: 320px;
+    margin: 0px auto;
+}
+
+.how-to-copy p,.how-to-steps li{
+    margin-bottom: 20px;
+}
+
+.how-to-steps{
+    margin-left: 24px;
+}
+
+.photo-note{
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+.image-caption{
+    margin: 0px;
+    font-size: 13px;
+    color: #625b52;
+    padding-top: 12px;
+}
+
+.history-copy .image-caption{
+    margin-bottom: 0px;
+}
+
+.book-title,.step-label{
+    font-weight: 600;
 }
 
 .sources{
@@ -499,7 +494,7 @@ main > section{
 }
 
 .sources ul{
-    padding-left: 20px;
+    margin-left: 20px;
     margin-bottom: 16px;
 }
 
@@ -507,75 +502,11 @@ main > section{
     margin-bottom: 10px;
 }
 
-@media (max-width: 760px){
-    .paper-photo{
-        margin-left: 0px;
-    }
-
-    .collage-page h1{
-        font-size: 46px;
-    }
+.collage-page .site-footer{
+    background: #292724;
+    color: #f3ede1;
 }
 
-/* Photo references in the collage history. */
-.collage-page .collage-history{
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-}
-
-.history-photo img{
-    max-height: 430px;
-    object-fit: contain;
-    background: #fffdf6;
-}
-
-.history-reference{
-    margin: 24px 0px;
-}
-
-.history-reference img{
-    max-height: 280px;
-    object-fit: contain;
-    background: #fffdf6;
-}
-
-@media (max-width: 760px){
-    .collage-page .collage-history{
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Equal columns keep the history separate from the instructions. */
-.how-to-copy p,.how-to-steps li{
-    margin-bottom: 20px;
-}
-
-.how-to-steps{
-    padding-left: 24px;
-}
-
-.photo-note{
-    margin-top: 16px;
-    font-size: 16px;
-}
-
-/* Show each collage reference in full, with no text over the image. */
-.collage-styles .card img{
-    height: 260px;
-    aspect-ratio: auto;
-    object-fit: contain;
-    background: white;
-}
-
-/* Familiar text elements for captions, titles, and step labels. */
-.book-title {
-  font-style: italic;
-}
-
-.step-label {
-  font-weight: bold;
-}
-
-.history-copy .image-caption {
-  margin-bottom: 0;
+.collage-page .site-footer a{
+    color: #f3ede1;
 }

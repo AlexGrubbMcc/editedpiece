@@ -73,7 +73,8 @@ img{
     height: auto;
 }
 
-figcaption{
+.image-caption {
+  margin: 0;
     font-size: 13px;
     color: var(--muted);
     padding-top: var(--space-small);
@@ -564,4 +565,17 @@ main > section{
     aspect-ratio: auto;
     object-fit: contain;
     background: white;
+}
+
+/* Familiar text elements for captions, titles, and step labels. */
+.book-title {
+  font-style: italic;
+}
+
+.step-label {
+  font-weight: bold;
+}
+
+.history-copy .image-caption {
+  margin-bottom: 0;
 }

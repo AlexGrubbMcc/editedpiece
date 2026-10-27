@@ -29,15 +29,10 @@ img{
 }
 
 /* Shared page width and spacing. */
-.skip-link,.site-nav,main,.hero{
+.site-nav,main,.hero{
     max-width: 1168px;
     margin: 0px auto;
     padding: 24px;
-}
-.skip-link{
-    display: block;
-    padding: 12px 24px;
-    font-size: 14px;
 }
 .site-nav,.site-nav ul,.site-footer .inner{
     display: flex;
